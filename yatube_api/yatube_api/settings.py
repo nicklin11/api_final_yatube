@@ -17,7 +17,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_filters',  # For search/filter functionality
     'pkg_resources',
     'rest_framework',
     'posts.apps.PostsConfig',  # Your posts app
@@ -102,8 +101,7 @@ REST_FRAMEWORK = {
     # Default if not specified in view
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,  # Default page size for pagination
-    # If you use django-filter extensively
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+
 }
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
