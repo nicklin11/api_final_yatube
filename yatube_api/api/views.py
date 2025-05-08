@@ -4,7 +4,7 @@ from rest_framework import viewsets, permissions, filters, mixins
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 
-from posts.models import Post, Group, Comment, Follow
+from posts.models import Post, Group, Follow
 from .serializers import (
     PostSerializer, GroupSerializer, CommentSerializer, FollowSerializer
 )
@@ -30,8 +30,9 @@ class PostViewSet(viewsets.ModelViewSet):
         """
         Отключает пагинацию, если 'limit' или 'offset' отсутствуют в запросе.
         """
-        if 'limit' not in self.request.query_params and 'offset' not in self.request.query_params:
-            return None  # Сигнал DRF не пагинировать
+        if 'limit' not in self.request.query_params and (
+                'offset') not in self.request.query_params:
+            return None
         return super().paginate_queryset(queryset)
 
     def list(self, request, *args, **kwargs):
