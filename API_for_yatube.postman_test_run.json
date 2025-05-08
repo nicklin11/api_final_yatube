@@ -1,0 +1,2407 @@
+{
+	"id": "444470d2-1847-4fa8-9301-a9c230db1b94",
+	"name": "API_for_yatube",
+	"timestamp": "2025-05-08T18:07:53.186Z",
+	"collection_id": "31974960-625d72dd-c078-4649-9666-1fb0b385c5e9",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 105,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-05-08T18:07:48.362Z",
+	"totalFail": 5,
+	"results": [
+		{
+			"id": "bee8880c-d1fb-4927-aaca-704fea6cd9b5",
+			"name": "get_token_for_regular_user // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/jwt/create/",
+			"time": 137,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				137
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "6572a81a-1e8a-44eb-ab64-f0d5b21f57d1",
+			"name": "get_token_for_admin // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/jwt/create/",
+			"time": 133,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				133
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "4e319936-8b39-45d1-8c06-1aa8fc204a06",
+			"name": "refresh_token // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/jwt/refresh/",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "145dcc9c-6286-49d4-93e2-9aa3c54622d6",
+			"name": "refresh_with_invalid_token // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/jwt/refresh/",
+			"time": 45,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Значения полей в ответе должны соответствовать спецификации": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Значения полей в ответе должны соответствовать спецификации": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Значения полей в ответе должны соответствовать спецификации": true
+				}
+			]
+		},
+		{
+			"id": "7e896945-9405-44de-9be8-54498a6aa718",
+			"name": "verify_valid_token // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/jwt/verify/",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true
+				}
+			]
+		},
+		{
+			"id": "058977f9-0313-4529-826f-f3b3f96638fe",
+			"name": "verify_invalid_token // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/jwt/verify/",
+			"time": 43,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Значения полей в ответе должны соответствовать спецификации": false
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Значения полей в ответе должны соответствовать спецификации": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Значения полей в ответе должны соответствовать спецификации": false
+				}
+			]
+		},
+		{
+			"id": "8f6f7cf4-c48a-411f-9505-5542670aaa38",
+			"name": "get_group_list // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/groups/",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "00b3bc4d-2d72-435f-a5a6-fdf99efe655b",
+			"name": "get_group_details // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/groups/1/",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "55db9689-3dec-4fb0-8feb-c429b9f1f6d6",
+			"name": "create_post_without_group // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/",
+			"time": 55,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 201": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 201": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "c96def80-66f6-411d-8c46-a5735eaef22c",
+			"name": "create_post_with_group // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/",
+			"time": 11,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 201": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 201": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "cf032f90-19a9-4beb-b2a2-351557dc4c57",
+			"name": "get_post_list // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "36370646-dd39-4380-844e-fd150b364517",
+			"name": "get_post_list_with_pagination // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/?limit=1&offset=1",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "685bfac9-3c8d-4419-9fd2-10d9d1f88b59",
+			"name": "get_post_details // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/26/",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответстовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответстовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответстовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "d88a8ce1-7624-4276-9f48-25e4b143f39c",
+			"name": "update_post_with_patch_request // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/26/",
+			"time": 57,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				57
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "d5ff213a-2032-4285-8fc0-835167908752",
+			"name": "update_post_with_put_request // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/26/",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "9ba6b0f9-f234-435c-808c-b4c89bd72653",
+			"name": "delete_post // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/26/",
+			"time": 48,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 204": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 204": true
+				}
+			]
+		},
+		{
+			"id": "294cf997-9540-4dd2-9882-6f9074fe21ee",
+			"name": "create_comment // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/",
+			"time": 47,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 201": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 201": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "189f4b34-79e2-404d-8941-e6ce05fc164a",
+			"name": "get_comments // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": false
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": false
+				}
+			]
+		},
+		{
+			"id": "1e816f1e-427b-4118-a7bd-9039ea36fd55",
+			"name": "get_comment_details // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/25/",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содердать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содердать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содердать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "bf590ad0-6a34-4944-8036-b9bcdb8375c4",
+			"name": "update_comment_with_patch_request // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/25/",
+			"time": 62,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				62
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "68581131-bef2-4b29-880c-369c5a25f89e",
+			"name": "update_commetn_with_put_request // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/25/",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "5331f134-371b-4024-8023-1ff6891a83ed",
+			"name": "delete_comment // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/25/",
+			"time": 47,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 204": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 204": true
+				}
+			]
+		},
+		{
+			"id": "94ed8544-7f77-4fe1-bcc0-4da4c2daaabc",
+			"name": "create_comment_for_permission_tests // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/",
+			"time": 48,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 201": true,
+				"Структура ответа должна соответствовать ожидаемой": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 201": true,
+					"Структура ответа должна соответствовать ожидаемой": true
+				}
+			]
+		},
+		{
+			"id": "0ba79e02-2121-412f-8104-0f66f2b406bf",
+			"name": "create_subscription // User",
+			"url": "http://127.0.0.1:8000/api/v1/follow/",
+			"time": 17,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 201": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Значения полей в ответе должны соответствовать спецификации": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Значения полей в ответе должны соответствовать спецификации": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 201": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Значения полей в ответе должны соответствовать спецификации": true
+				}
+			]
+		},
+		{
+			"id": "1fdb5869-ccd0-481b-985c-594347ccedc1",
+			"name": "get_follows // User",
+			"url": "http://127.0.0.1:8000/api/v1/follow/",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": false
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": false
+				}
+			]
+		},
+		{
+			"id": "8792b9fd-5c41-4c7a-bc85-e1676e465098",
+			"name": "search_follow // User",
+			"url": "http://127.0.0.1:8000/api/v1/follow/?search=root",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 200": true,
+				"Структура ответа должна соответствовать ожидаемой": false,
+				"Перечень подписок должен содержать только элементы, удовлетворяющие условиям поиска": false
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Перечень подписок должен содержать только элементы, удовлетворяющие условиям поиска": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 200": true,
+					"Структура ответа должна соответствовать ожидаемой": false,
+					"Перечень подписок должен содержать только элементы, удовлетворяющие условиям поиска": false
+				}
+			]
+		},
+		{
+			"id": "07592a24-c56c-4e5f-b3d3-ef1727ee7832",
+			"name": "create_group // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/groups/1/",
+			"time": 46,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 405": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 405": true
+				}
+			]
+		},
+		{
+			"id": "1a994881-3a1b-483e-b73f-2efffa5dc67d",
+			"name": "update_group_with_patch_request // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/groups/1/",
+			"time": 45,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 405": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 405": true
+				}
+			]
+		},
+		{
+			"id": "40f62973-f7f5-4627-b3ab-77fec00aaf2f",
+			"name": "update_group_with_put_request // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/groups/1/",
+			"time": 44,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 405": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 405": true
+				}
+			]
+		},
+		{
+			"id": "de3c0781-a943-4fd1-9399-62f4a2e0080d",
+			"name": "delete_group // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/groups/1/",
+			"time": 44,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 405": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 405": true
+				}
+			]
+		},
+		{
+			"id": "bfa8a1eb-6a05-4d70-91eb-dec9cf5b7457",
+			"name": "update_post_not_author_with_patch_request // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 44,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 403": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 403": true
+				}
+			]
+		},
+		{
+			"id": "2385bc02-f27f-40de-b044-7d61b5232a4c",
+			"name": "update_post_not_author_with_put_request // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 43,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 403": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 403": true
+				}
+			]
+		},
+		{
+			"id": "f30e146e-2039-4f82-8212-efc141eb4866",
+			"name": "delete_post_not_author // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 46,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 403": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 403": true
+				}
+			]
+		},
+		{
+			"id": "30a4e290-e19f-4af7-8274-1a6fb45fed44",
+			"name": "create_post_with_empty_text // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/",
+			"time": 46,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 400": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 400": true
+				}
+			]
+		},
+		{
+			"id": "502144c3-724b-4b34-b101-c2e35598e65b",
+			"name": "create_post_with_invalid_group // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/",
+			"time": 48,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 400": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 400": true
+				}
+			]
+		},
+		{
+			"id": "0954fcea-91ca-4fcc-b7c6-5e9581fc4a11",
+			"name": "patch_post_with_empty_text // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 47,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 400": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 400": true
+				}
+			]
+		},
+		{
+			"id": "49038234-0c3b-4cd4-9d63-303fd5ef1c0f",
+			"name": "put_for_post_with_non_existing_group // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 46,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 400": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 400": true
+				}
+			]
+		},
+		{
+			"id": "235f0cc9-4577-46d7-a43b-6d3206615c62",
+			"name": "patch_comment_with_empty_text // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/",
+			"time": 44,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 400": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 400": true
+				}
+			]
+		},
+		{
+			"id": "f6a7db9a-5b2a-4d25-b73d-2e895bcaf2e3",
+			"name": "patch_comment_with_empty_text // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/26/",
+			"time": 49,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 400": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 400": true
+				}
+			]
+		},
+		{
+			"id": "748383b2-07f5-4efc-ae3f-3b3763c06044",
+			"name": "update_comment_not_author_with_patch_request // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/26/",
+			"time": 58,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 403": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				58
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 403": true
+				}
+			]
+		},
+		{
+			"id": "bbea7f5d-1f7d-49e8-8daf-b666ba2f5e53",
+			"name": "update_comment_not_auth_with_put_request // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/26/",
+			"time": 44,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 403": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 403": true
+				}
+			]
+		},
+		{
+			"id": "20947184-968f-40b2-b063-2a6e20436b38",
+			"name": "delete_comment_not_author // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/26/",
+			"time": 44,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 403": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 403": true
+				}
+			]
+		},
+		{
+			"id": "47078326-f9ff-4345-8a0c-d1abca47a581",
+			"name": "create_post_without_group // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/",
+			"time": 45,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "22a51890-89fa-4961-a6fd-e6c59b5cb470",
+			"name": "update_post_with_patch_request // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 44,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "3845fbda-caab-4e2e-977a-c9e36427643a",
+			"name": "update_post_with_put_request // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 44,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "dd78b676-7074-42de-a5ba-81ced8e70588",
+			"name": "delete_post // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 43,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "08460c19-f60a-4da2-9177-a7db0952ede9",
+			"name": "create_comment // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/",
+			"time": 43,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "18e3d311-19ca-4113-b103-9148ba18938b",
+			"name": "updete_comment_with_patch_request // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/26/",
+			"time": 43,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "05d31130-83b6-4781-97db-8229689ed059",
+			"name": "update_comment_with_put_request // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/26/",
+			"time": 44,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "a094337d-31e4-40d6-aa3c-50416760101b",
+			"name": "delete_comment // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/comments/26/",
+			"time": 45,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "64141ed5-19d3-4436-8614-d46723a8a435",
+			"name": "get_follow // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/follow/",
+			"time": 44,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "e9cf845d-ee50-4acf-989e-bd0ccae82dec",
+			"name": "create_subscription // No Auth",
+			"url": "http://127.0.0.1:8000/api/v1/follow/",
+			"time": 43,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 401": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 401": true
+				}
+			]
+		},
+		{
+			"id": "d5ddf8eb-34fc-4203-a5e3-62e1f012b28a",
+			"name": "get_group_404 // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/groups/99999/",
+			"time": 45,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "16b38537-3e24-414f-9b40-de7d3c37ecd8",
+			"name": "get_post_404 // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/99999/",
+			"time": 51,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "32a3e8f7-48b8-4789-b50e-41571d2c444f",
+			"name": "patch_post_404 // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/99999/",
+			"time": 44,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "88f365b7-5479-4edc-aaa9-37139b1700e0",
+			"name": "delete_post_404 // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/99999/",
+			"time": 46,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "d297fbd7-6424-4977-9772-6625882c477e",
+			"name": "get_comment_404 // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/99999/comments/99999/",
+			"time": 46,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "5e39e983-ee67-447c-ad35-b5dff4374560",
+			"name": "patch_comment_404 // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/99999/comments/99999/",
+			"time": 45,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "0f6f992a-aef8-42bf-a1d3-9da7c1bf626b",
+			"name": "delete_comment_404 // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/99999/comments/99999/",
+			"time": 44,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "df5d64e2-2ab0-4dd0-b10b-dc9d6d696c82",
+			"name": "get_existing_comment_with_wrong_url // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/99999/comments/26/",
+			"time": 50,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "1e91c756-2dbc-45f7-bedb-aede160811d6",
+			"name": "create_post_from_another_author // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/",
+			"time": 55,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 201": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 201": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "b80efccd-3364-459a-a23e-8fc61ced4784",
+			"name": "create_comment_from_another_user // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/posts/28/comments/",
+			"time": 46,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 201": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Ответ должен содержать ожидаемые данные": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Ответ должен содержать ожидаемые данные": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 201": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Ответ должен содержать ожидаемые данные": true
+				}
+			]
+		},
+		{
+			"id": "c3df5149-d903-4036-ab98-bd8f844ed633",
+			"name": "update_follow_with_put_request // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/follow/",
+			"time": 44,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 405": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 405": true
+				}
+			]
+		},
+		{
+			"id": "f6f34e6d-74f2-441d-96f1-c721a36ceb7e",
+			"name": "update_follow_with_patch_request // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/follow/",
+			"time": 45,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 405": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 405": true
+				}
+			]
+		},
+		{
+			"id": "31347c7c-00ee-4c9b-8544-3b46e47a89cf",
+			"name": "get_follow_details // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/follow/1/",
+			"time": 48,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 404": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 404": true
+				}
+			]
+		},
+		{
+			"id": "2fbda37c-fddc-4e16-8cd4-3979e094fb74",
+			"name": "delete_follow // Admin",
+			"url": "http://127.0.0.1:8000/api/v1/follow/",
+			"time": 45,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 405": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 405": true
+				}
+			]
+		},
+		{
+			"id": "da30f3d3-a431-446d-8ce0-1b907bce9db0",
+			"name": "create_subscription_for_other_user // User",
+			"url": "http://127.0.0.1:8000/api/v1/follow/",
+			"time": 54,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 201": true,
+				"Структура ответа должна соответствовать ожидаемой": true,
+				"Значения полей в ответе должны соответствовать спецификации": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Структура ответа должна соответствовать ожидаемой": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Значения полей в ответе должны соответствовать спецификации": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 201": true,
+					"Структура ответа должна соответствовать ожидаемой": true,
+					"Значения полей в ответе должны соответствовать спецификации": true
+				}
+			]
+		},
+		{
+			"id": "f0ef5aba-0077-4219-8b77-fc41e4c181a2",
+			"name": "delete_post_with_group // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/27/",
+			"time": 47,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 204": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 204": true
+				}
+			]
+		},
+		{
+			"id": "2c4c30d9-a3d2-471d-826a-f185202ad0fa",
+			"name": "delete_negative_test_post // User",
+			"url": "http://127.0.0.1:8000/api/v1/posts/28/",
+			"time": 46,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Статус-код ответа должен быть 204": true
+			},
+			"testPassFailCounts": {
+				"Статус-код ответа должен быть 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Статус-код ответа должен быть 204": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3285,
+	"collection": {
+		"requests": [
+			{
+				"id": "bee8880c-d1fb-4927-aaca-704fea6cd9b5",
+				"method": "POST"
+			},
+			{
+				"id": "6572a81a-1e8a-44eb-ab64-f0d5b21f57d1",
+				"method": "POST"
+			},
+			{
+				"id": "4e319936-8b39-45d1-8c06-1aa8fc204a06",
+				"method": "POST"
+			},
+			{
+				"id": "145dcc9c-6286-49d4-93e2-9aa3c54622d6",
+				"method": "POST"
+			},
+			{
+				"id": "7e896945-9405-44de-9be8-54498a6aa718",
+				"method": "POST"
+			},
+			{
+				"id": "058977f9-0313-4529-826f-f3b3f96638fe",
+				"method": "POST"
+			},
+			{
+				"id": "8f6f7cf4-c48a-411f-9505-5542670aaa38",
+				"method": "GET"
+			},
+			{
+				"id": "00b3bc4d-2d72-435f-a5a6-fdf99efe655b",
+				"method": "GET"
+			},
+			{
+				"id": "55db9689-3dec-4fb0-8feb-c429b9f1f6d6",
+				"method": "POST"
+			},
+			{
+				"id": "c96def80-66f6-411d-8c46-a5735eaef22c",
+				"method": "POST"
+			},
+			{
+				"id": "cf032f90-19a9-4beb-b2a2-351557dc4c57",
+				"method": "GET"
+			},
+			{
+				"id": "36370646-dd39-4380-844e-fd150b364517",
+				"method": "GET"
+			},
+			{
+				"id": "685bfac9-3c8d-4419-9fd2-10d9d1f88b59",
+				"method": "GET"
+			},
+			{
+				"id": "d88a8ce1-7624-4276-9f48-25e4b143f39c",
+				"method": "PATCH"
+			},
+			{
+				"id": "d5ff213a-2032-4285-8fc0-835167908752",
+				"method": "PUT"
+			},
+			{
+				"id": "9ba6b0f9-f234-435c-808c-b4c89bd72653",
+				"method": "DELETE"
+			},
+			{
+				"id": "294cf997-9540-4dd2-9882-6f9074fe21ee",
+				"method": "POST"
+			},
+			{
+				"id": "189f4b34-79e2-404d-8941-e6ce05fc164a",
+				"method": "GET"
+			},
+			{
+				"id": "1e816f1e-427b-4118-a7bd-9039ea36fd55",
+				"method": "GET"
+			},
+			{
+				"id": "bf590ad0-6a34-4944-8036-b9bcdb8375c4",
+				"method": "PATCH"
+			},
+			{
+				"id": "68581131-bef2-4b29-880c-369c5a25f89e",
+				"method": "PUT"
+			},
+			{
+				"id": "5331f134-371b-4024-8023-1ff6891a83ed",
+				"method": "DELETE"
+			},
+			{
+				"id": "94ed8544-7f77-4fe1-bcc0-4da4c2daaabc",
+				"method": "POST"
+			},
+			{
+				"id": "0ba79e02-2121-412f-8104-0f66f2b406bf",
+				"method": "POST"
+			},
+			{
+				"id": "1fdb5869-ccd0-481b-985c-594347ccedc1",
+				"method": "GET"
+			},
+			{
+				"id": "8792b9fd-5c41-4c7a-bc85-e1676e465098",
+				"method": "GET"
+			},
+			{
+				"id": "07592a24-c56c-4e5f-b3d3-ef1727ee7832",
+				"method": "POST"
+			},
+			{
+				"id": "1a994881-3a1b-483e-b73f-2efffa5dc67d",
+				"method": "PATCH"
+			},
+			{
+				"id": "40f62973-f7f5-4627-b3ab-77fec00aaf2f",
+				"method": "PUT"
+			},
+			{
+				"id": "de3c0781-a943-4fd1-9399-62f4a2e0080d",
+				"method": "DELETE"
+			},
+			{
+				"id": "bfa8a1eb-6a05-4d70-91eb-dec9cf5b7457",
+				"method": "PATCH"
+			},
+			{
+				"id": "2385bc02-f27f-40de-b044-7d61b5232a4c",
+				"method": "PUT"
+			},
+			{
+				"id": "f30e146e-2039-4f82-8212-efc141eb4866",
+				"method": "DELETE"
+			},
+			{
+				"id": "30a4e290-e19f-4af7-8274-1a6fb45fed44",
+				"method": "POST"
+			},
+			{
+				"id": "502144c3-724b-4b34-b101-c2e35598e65b",
+				"method": "POST"
+			},
+			{
+				"id": "0954fcea-91ca-4fcc-b7c6-5e9581fc4a11",
+				"method": "PATCH"
+			},
+			{
+				"id": "49038234-0c3b-4cd4-9d63-303fd5ef1c0f",
+				"method": "PUT"
+			},
+			{
+				"id": "235f0cc9-4577-46d7-a43b-6d3206615c62",
+				"method": "POST"
+			},
+			{
+				"id": "f6a7db9a-5b2a-4d25-b73d-2e895bcaf2e3",
+				"method": "PATCH"
+			},
+			{
+				"id": "748383b2-07f5-4efc-ae3f-3b3763c06044",
+				"method": "PATCH"
+			},
+			{
+				"id": "bbea7f5d-1f7d-49e8-8daf-b666ba2f5e53",
+				"method": "PUT"
+			},
+			{
+				"id": "20947184-968f-40b2-b063-2a6e20436b38",
+				"method": "DELETE"
+			},
+			{
+				"id": "47078326-f9ff-4345-8a0c-d1abca47a581",
+				"method": "POST"
+			},
+			{
+				"id": "22a51890-89fa-4961-a6fd-e6c59b5cb470",
+				"method": "PATCH"
+			},
+			{
+				"id": "3845fbda-caab-4e2e-977a-c9e36427643a",
+				"method": "PUT"
+			},
+			{
+				"id": "dd78b676-7074-42de-a5ba-81ced8e70588",
+				"method": "DELETE"
+			},
+			{
+				"id": "08460c19-f60a-4da2-9177-a7db0952ede9",
+				"method": "POST"
+			},
+			{
+				"id": "18e3d311-19ca-4113-b103-9148ba18938b",
+				"method": "PATCH"
+			},
+			{
+				"id": "05d31130-83b6-4781-97db-8229689ed059",
+				"method": "PUT"
+			},
+			{
+				"id": "a094337d-31e4-40d6-aa3c-50416760101b",
+				"method": "DELETE"
+			},
+			{
+				"id": "64141ed5-19d3-4436-8614-d46723a8a435",
+				"method": "GET"
+			},
+			{
+				"id": "e9cf845d-ee50-4acf-989e-bd0ccae82dec",
+				"method": "POST"
+			},
+			{
+				"id": "d5ddf8eb-34fc-4203-a5e3-62e1f012b28a",
+				"method": "GET"
+			},
+			{
+				"id": "16b38537-3e24-414f-9b40-de7d3c37ecd8",
+				"method": "GET"
+			},
+			{
+				"id": "32a3e8f7-48b8-4789-b50e-41571d2c444f",
+				"method": "PATCH"
+			},
+			{
+				"id": "88f365b7-5479-4edc-aaa9-37139b1700e0",
+				"method": "DELETE"
+			},
+			{
+				"id": "d297fbd7-6424-4977-9772-6625882c477e",
+				"method": "GET"
+			},
+			{
+				"id": "5e39e983-ee67-447c-ad35-b5dff4374560",
+				"method": "PATCH"
+			},
+			{
+				"id": "0f6f992a-aef8-42bf-a1d3-9da7c1bf626b",
+				"method": "DELETE"
+			},
+			{
+				"id": "df5d64e2-2ab0-4dd0-b10b-dc9d6d696c82",
+				"method": "GET"
+			},
+			{
+				"id": "1e91c756-2dbc-45f7-bedb-aede160811d6",
+				"method": "POST"
+			},
+			{
+				"id": "b80efccd-3364-459a-a23e-8fc61ced4784",
+				"method": "POST"
+			},
+			{
+				"id": "c3df5149-d903-4036-ab98-bd8f844ed633",
+				"method": "PUT"
+			},
+			{
+				"id": "f6f34e6d-74f2-441d-96f1-c721a36ceb7e",
+				"method": "PATCH"
+			},
+			{
+				"id": "31347c7c-00ee-4c9b-8544-3b46e47a89cf",
+				"method": "GET"
+			},
+			{
+				"id": "2fbda37c-fddc-4e16-8cd4-3979e094fb74",
+				"method": "DELETE"
+			},
+			{
+				"id": "da30f3d3-a431-446d-8ce0-1b907bce9db0",
+				"method": "POST"
+			},
+			{
+				"id": "f0ef5aba-0077-4219-8b77-fc41e4c181a2",
+				"method": "DELETE"
+			},
+			{
+				"id": "2c4c30d9-a3d2-471d-826a-f185202ad0fa",
+				"method": "DELETE"
+			}
+		]
+	}
+}
