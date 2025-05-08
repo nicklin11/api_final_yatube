@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 from rest_framework import viewsets, permissions, filters, mixins
 from rest_framework.pagination import LimitOffsetPagination
-from rest_framework.response import Response  # Для кастомного list в PostViewSet
+from rest_framework.response import Response
 
 from posts.models import Post, Group, Comment, Follow
 from .serializers import (
@@ -20,7 +20,7 @@ class PostViewSet(viewsets.ModelViewSet):
         permissions.IsAuthenticatedOrReadOnly,
         IsAuthorOrReadOnly
     ]
-    # pagination_class по умолчанию используется, если paginate_queryset возвращает страницу
+
     pagination_class = LimitOffsetPagination
 
     def perform_create(self, serializer):
@@ -54,7 +54,7 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = [permissions.AllowAny]
-    pagination_class = None  # Явно отключаем пагинацию согласно Redoc/Postman-тесту
+    pagination_class = None
 
 
 class CommentViewSet(viewsets.ModelViewSet):
@@ -63,7 +63,7 @@ class CommentViewSet(viewsets.ModelViewSet):
         permissions.IsAuthenticatedOrReadOnly,
         IsAuthorOrReadOnly
     ]
-    pagination_class = None  # Комментарии не пагинируются по Redoc
+    pagination_class = None
 
     def get_post(self):
         post_id = self.kwargs.get("post_id")
@@ -87,7 +87,7 @@ class FollowViewSet(
     permission_classes = [permissions.IsAuthenticated]
     filter_backends = [filters.SearchFilter]
     search_fields = ['following__username']
-    pagination_class = None  # Подписки не пагинируются по Redoc/Postman
+    pagination_class = None
 
     def get_queryset(self):
         return Follow.objects.filter(user=self.request.user)

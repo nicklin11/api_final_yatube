@@ -53,15 +53,6 @@ class FollowSerializer(serializers.ModelSerializer):
     class Meta:
         model = Follow
         fields = ('user', 'following')
-        # UniqueTogetherValidator is implicitly handled by model's UniqueConstraint
-        # but can be added for more explicit API error messages if desired.
-        # validators = [
-        #     serializers.UniqueTogetherValidator(
-        #         queryset=Follow.objects.all(),
-        #         fields=('user', 'following'),
-        #         message="Вы уже подписаны на этого пользователя."
-        #     )
-        # ]
 
     def validate_following(self, value):
         if self.context['request'].user == value:
