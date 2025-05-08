@@ -1,7 +1,7 @@
 # posts/models.py
 from django.contrib.auth import get_user_model
 from django.db import models
-from django.db.models import UniqueConstraint, CheckConstraint, Q
+from django.db.models import UniqueConstraint
 
 User = get_user_model()
 
@@ -107,8 +107,6 @@ class Follow(models.Model):
         constraints = [
             UniqueConstraint(
                 fields=['user', 'following'], name='unpique_follow'),
-            CheckConstraint(check=~Q(user=models.F('following')),
-                            name='prevent_self_follow_model')
         ]
 
     def __str__(self):
