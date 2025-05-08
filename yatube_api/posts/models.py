@@ -1,3 +1,4 @@
+# posts/models.py
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.db.models import UniqueConstraint, CheckConstraint, Q
@@ -33,7 +34,7 @@ class Post(models.Model):
         'Картинка',
         upload_to='posts/',
         blank=True,
-        null=True
+        null=True  # Allow null for image
     )
     group = models.ForeignKey(
         Group,
@@ -90,25 +91,24 @@ class Follow(models.Model):
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='follower',
+        related_name='follower',  # Пользователь, который подписывается
         verbose_name='Подписчик'
     )
     following = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name='following_users', # Changed from 'following' to avoid clash with User.following related_name if any
-        verbose_name='Автор, на которого подписаны'
+        related_name='following',  # Пользователь, на которого подписываются
+        verbose_name='Автор'
     )
 
     class Meta:
         verbose_name = 'Подписка'
         verbose_name_plural = 'Подписки'
         constraints = [
-            UniqueConstraint(fields=['user', 'following'], name='unique_follow'),
-            CheckConstraint(
-                check=~Q(user=models.F('following')),
-                name='prevent_self_follow_model'
-            )
+            UniqueConstraint(
+                fields=['user', 'following'], name='unpique_follow'),
+            CheckConstraint(check=~Q(user=models.F('following')),
+                            name='prevent_self_follow_model')
         ]
 
     def __str__(self):

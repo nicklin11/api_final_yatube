@@ -14,7 +14,9 @@ class PostSerializer(serializers.ModelSerializer):
         required=False,
         allow_null=True
     )
-    image = serializers.ImageField(required=False, allow_null=True, use_url=True) # use_url=True is good practice
+    # use_url=True is good practice
+    image = serializers.ImageField(
+        required=False, allow_null=True, use_url=True)
 
     class Meta:
         model = Post
@@ -61,20 +63,22 @@ class FollowSerializer(serializers.ModelSerializer):
         #     )
         # ]
 
-
     def validate_following(self, value):
         if self.context['request'].user == value:
-            raise serializers.ValidationError("Нельзя подписаться на самого себя.")
+            raise serializers.ValidationError(
+                "Нельзя подписаться на самого себя.")
         return value
 
     def validate(self, data):
         # data['following'] will exist due to field definition
         # user is derived from default or context
         user = self.context['request'].user
-        following_user = data['following'] # This is already a User instance due to SlugRelatedField
+        # This is already a User instance due to SlugRelatedField
+        following_user = data['following']
 
         if Follow.objects.filter(user=user, following=following_user).exists():
             raise serializers.ValidationError(
-                {"following": "Вы уже подписаны на этого пользователя."} # Or a non-field error
+                # Or a non-field error
+                {"following": "Вы уже подписаны на этого пользователя."}
             )
         return data

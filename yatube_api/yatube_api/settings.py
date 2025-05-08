@@ -17,10 +17,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_filters', # For search/filter functionality
+    'django_filters',  # For search/filter functionality
     'pkg_resources',
     'rest_framework',
-    'posts.apps.PostsConfig', # Your posts app
+    'posts.apps.PostsConfig',  # Your posts app
     'api.apps.ApiConfig',     # Your api app
 ]
 
@@ -99,30 +99,31 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination', # Default if not specified in view
-    'PAGE_SIZE': 10, # Default page size for pagination
-    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'], # If you use django-filter extensively
+    # Default if not specified in view
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,  # Default page size for pagination
+    # If you use django-filter extensively
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 }
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-from datetime import timedelta
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30), # Example
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),  # Example
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),   # Example
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,
     'UPDATE_LAST_LOGIN': False,
 
     'ALGORITHM': 'HS256',
-    'SIGNING_KEY': SECRET_KEY, # Uses Django's SECRET_KEY by default
+    'SIGNING_KEY': SECRET_KEY,  # Uses Django's SECRET_KEY by default
     'VERIFYING_KEY': None,
     'AUDIENCE': None,
     'ISSUER': None,
     'JWK_URL': None,
     'LEEWAY': 0,
 
-    'AUTH_HEADER_TYPES': ('Bearer',), # Standard prefix for JWT
+    'AUTH_HEADER_TYPES': ('Bearer',),  # Standard prefix for JWT
     'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
