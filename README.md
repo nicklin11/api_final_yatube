@@ -26,7 +26,7 @@
 ## Тестирование
 Перед началом убедитесь что в консоли установлен PythonPath до Django проекта:
 ```
-export PYTHONPATH=$HOME/Coding/api_final_yatube/yatube_api
+export PYTHONPATH=$HOME/path/to/project/api_final_yatube/yatube_api
 ```
 Затем проводите тестирование
 ```
