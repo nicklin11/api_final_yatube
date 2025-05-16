@@ -24,7 +24,7 @@
 *   Simple JWT (для аутентификации)
 *   SQLite (база данных по умолчанию для разработки)
 ## Тестирование
-Перед началом убедитесь что в консоли установлен PythonPath до Django проекта:
+Перед началом убедитесь что в окружении установлен PythonPath до Django проекта:
 ```
 export PYTHONPATH=$HOME/path/to/project/api_final_yatube/yatube_api
 ```
